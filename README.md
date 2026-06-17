@@ -6,9 +6,11 @@ Sistema Inteligente de Apoio à Permanência Estudantil utilizando Aprendizado p
 
 O PermanecerAI é um projeto acadêmico desenvolvido para demonstrar a aplicação de técnicas de **Aprendizado por Reforço (Reinforcement Learning)** em um problema de relevância social: a permanência estudantil no ensino superior.
 
-O sistema simula diferentes situações enfrentadas por estudantes universitários e treina um agente inteligente para aprender quais ações tendem a produzir melhores resultados em termos de motivação, desempenho acadêmico, frequência e redução do estresse.
+O sistema simula diferentes cenários enfrentados por estudantes universitários e treina um agente inteligente para aprender quais ações tendem a produzir melhores resultados em termos de motivação, desempenho acadêmico, frequência e redução do estresse.
 
-O aprendizado é realizado por meio do algoritmo **Q-Learning**, permitindo que o agente aprenda por tentativa e erro, sem a necessidade de dados previamente rotulados.
+O aprendizado é realizado por meio do algoritmo **Q-Learning**, permitindo que o agente aprenda por tentativa e erro, sem a necessidade de respostas previamente rotuladas.
+
+Além do treinamento do agente, o projeto disponibiliza um dashboard interativo desenvolvido em Streamlit para visualização dos resultados e demonstração da política aprendida.
 
 ---
 
@@ -18,16 +20,18 @@ Desenvolver um agente baseado em Aprendizado por Reforço capaz de aprender estr
 
 ---
 
-## 🧠 Conceitos Utilizados
+## 🧠 Problema Proposto
 
-* Inteligência Artificial
-* Aprendizado por Reforço (Reinforcement Learning)
-* Q-Learning
-* Estados
-* Ações
-* Recompensas
-* Política Aprendida
-* Simulação de Ambiente
+A evasão universitária é um desafio enfrentado por instituições de ensino em todo o mundo.
+
+Diversos fatores podem influenciar a permanência de um estudante, tais como:
+
+* Baixa motivação;
+* Elevado nível de estresse;
+* Baixo desempenho acadêmico;
+* Baixa frequência às aulas.
+
+O PermanecerAI busca simular esse contexto e identificar quais intervenções tendem a gerar melhores resultados para o estudante.
 
 ---
 
@@ -53,42 +57,85 @@ Cada variável assume três níveis:
 Exemplo:
 
 ```text
-(0, 2, 1, 0)
+(0,2,1,0)
 
-Motivação: Baixa
-Estresse: Alto
-Desempenho: Médio
-Frequência: Baixa
+Motivação = Baixa
+Estresse = Alto
+Desempenho = Médio
+Frequência = Baixa
+```
+
+Total de estados possíveis:
+
+```text
+3⁴ = 81 estados
 ```
 
 ---
 
 ### Ações Possíveis
 
-O agente pode escolher entre as seguintes ações:
+O agente pode escolher entre:
 
-* Estudar sozinho
-* Descansar
-* Participar de monitoria
-* Realizar atividade física
-* Procurar apoio pedagógico
-* Participar de grupo de estudos
+* Estudar sozinho;
+* Descansar;
+* Participar de monitoria;
+* Fazer atividade física;
+* Procurar apoio pedagógico;
+* Participar de grupo de estudos.
+
+Total:
+
+```text
+6 ações possíveis
+```
 
 ---
 
 ### Recompensa
 
-A recompensa foi projetada para incentivar:
+A função de recompensa foi projetada para incentivar:
 
-✅ Maior motivação
+✅ aumento da motivação
 
-✅ Melhor desempenho acadêmico
+✅ aumento do desempenho acadêmico
 
-✅ Maior frequência
+✅ aumento da frequência
 
-✅ Menor estresse
+✅ redução do estresse
 
-O agente recebe recompensas ou penalidades de acordo com os resultados de suas ações.
+O agente recebe recompensas ou penalidades de acordo com os resultados produzidos por suas ações.
+
+---
+
+## 🔬 Dataset Sintético
+
+Para documentar e validar os cenários do ambiente foi criado um dataset sintético contendo:
+
+```text
+243 registros simulados
+81 estados possíveis
+3 repetições por estado
+```
+
+Variáveis:
+
+* Motivação
+* Estresse
+* Desempenho
+* Frequência
+* Pontuação de risco
+* Risco de evasão
+
+Importante:
+
+> O dataset não foi utilizado para treinar o agente de forma supervisionada. O treinamento ocorreu por interação com o ambiente, conforme a lógica do Aprendizado por Reforço.
+
+Arquivo:
+
+```text
+data/estudantes_simulados.csv
+```
 
 ---
 
@@ -104,11 +151,11 @@ Q(s,a) ← Q(s,a) + α[r + γ max Q(s',a') − Q(s,a)]
 
 Onde:
 
-* Q(s,a) = valor da ação no estado atual
-* α = taxa de aprendizado
-* γ = fator de desconto
-* r = recompensa recebida
-* s' = próximo estado
+* Q(s,a) = qualidade da ação no estado atual;
+* α = taxa de aprendizado;
+* γ = fator de desconto;
+* r = recompensa recebida;
+* s' = próximo estado.
 
 ---
 
@@ -122,19 +169,26 @@ Configuração utilizada:
 150.000 decisões simuladas
 ```
 
-Durante o treinamento o agente explora o ambiente, recebe recompensas e atualiza sua política de decisão.
+Durante o treinamento, o agente:
+
+1. Observa o estado do estudante;
+2. Escolhe uma ação;
+3. Recebe uma recompensa;
+4. Atualiza sua Q-Table;
+5. Aprende uma política de decisão.
 
 ---
 
-## 📈 Resultados
+## 📈 Resultados Obtidos
 
 Os resultados demonstraram evolução progressiva das recompensas ao longo dos episódios.
 
-A curva de aprendizado apresentou:
+Observou-se:
 
 * Crescimento consistente da recompensa média;
 * Redução do comportamento aleatório;
-* Convergência da política aprendida.
+* Convergência da política aprendida;
+* Estabilização do aprendizado após aproximadamente 1000 episódios.
 
 Esses resultados indicam que o agente conseguiu aprender estratégias mais eficientes dentro do ambiente simulado.
 
@@ -144,11 +198,12 @@ Esses resultados indicam que o agente conseguiu aprender estratégias mais efici
 
 O projeto inclui um dashboard desenvolvido em Streamlit que permite:
 
+* Visualizar o ciclo do Aprendizado por Reforço;
 * Simular diferentes perfis de estudantes;
 * Consultar recomendações do agente;
-* Visualizar a evolução do treinamento;
-* Entender o funcionamento do Aprendizado por Reforço;
-* Explorar a política aprendida.
+* Visualizar a curva de aprendizado;
+* Explorar o dataset sintético;
+* Consultar a política aprendida.
 
 ---
 
@@ -160,21 +215,38 @@ permanecer_ai/
 ├── app.py
 ├── train.py
 ├── analise.py
+├── gerar_dataset.py
 ├── README.md
 ├── requirements.txt
 │
 └── data/
     ├── recompensas.csv
-    └── politica.csv
+    ├── politica.csv
+    └── estudantes_simulados.csv
 ```
 
-## 🔬 Trabalhos Futuros
+## 🎓 Conceitos Demonstrados
+
+* Aprendizado por Reforço
+* Q-Learning
+* Ambiente Simulado
+* Estado
+* Ação
+* Recompensa
+* Política Aprendida
+* Convergência
+* Tomada de decisão baseada em IA
+
+---
+
+## 🔮 Trabalhos Futuros
 
 * Utilização de dados reais de estudantes;
 * Integração com ambientes virtuais de aprendizagem;
-* Personalização das recomendações;
 * Comparação entre Q-Learning e SARSA;
-* Aplicação em programas institucionais de permanência estudantil.
+* Personalização das recomendações;
+* Modelagem mais complexa da evasão estudantil;
+* Aplicação em programas institucionais de permanência.
 
 ---
 
@@ -182,4 +254,5 @@ permanecer_ai/
 
 Projeto acadêmico desenvolvido para a disciplina de Aprendizado por Reforço.
 
-**PermanecerAI — Sistema Inteligente de Apoio à Permanência Estudantil**
+**PermanecerAI – Sistema Inteligente de Apoio à Permanência Estudantil**
+
