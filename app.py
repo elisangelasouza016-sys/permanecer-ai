@@ -192,9 +192,9 @@ st.write("""
 Foi criado um dataset sintético para representar os cenários possíveis de estudantes.
 Ele contém combinações de motivação, estresse, desempenho acadêmico e frequência.
 
-Esse dataset documenta os cenários utilizados no ambiente simulado. O agente, entretanto,
-não foi treinado por aprendizado supervisionado. Ele aprendeu por interação com o ambiente,
-recebendo recompensas e penalidades conforme suas ações.
+Esse dataset foi utilizado como base dos estados iniciais do treinamento. A partir
+desses cenários, o agente interagiu com o ambiente simulado e aprendeu por
+Aprendizado por Reforço, recebendo recompensas e penalidades conforme suas ações.
 """)
 
 st.dataframe(
@@ -208,6 +208,7 @@ st.header("Política aprendida")
 
 st.write("""
 A tabela abaixo mostra exemplos de estados e ações escolhidas pelo agente após o treinamento.
+
 Cada estado é representado por quatro valores:
 
 `(motivação, estresse, desempenho, frequência)`
@@ -220,7 +221,7 @@ Onde:
 """)
 
 st.dataframe(
-    politica[["estado", "acao"]],
+    politica[["estado", "motivacao", "estresse", "desempenho", "frequencia", "acao"]],
     use_container_width=True
 )
 
