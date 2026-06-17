@@ -26,22 +26,13 @@ usando **Q-Learning** para recomendar ações de apoio à permanência estudanti
 
 st.divider()
 
-# ==============================
-# MÉTRICAS GERAIS
-# ==============================
-
 c1, c2, c3, c4 = st.columns(4)
-
 c1.metric("Episódios", "5000")
 c2.metric("Decisões simuladas", "150.000")
 c3.metric("Estados possíveis", "81")
 c4.metric("Ações possíveis", "6")
 
 st.divider()
-
-# ==============================
-# COMO O RL FUNCIONA
-# ==============================
 
 st.header("Como o Aprendizado por Reforço funciona")
 
@@ -70,10 +61,6 @@ favorecer a permanência estudantil.
 """)
 
 st.divider()
-
-# ==============================
-# MODELAGEM
-# ==============================
 
 st.header("Modelagem do problema")
 
@@ -116,10 +103,6 @@ with col_c:
 
 st.divider()
 
-# ==============================
-# SIMULADOR
-# ==============================
-
 st.header("Simulador de recomendação")
 
 col1, col2 = st.columns(2)
@@ -160,10 +143,6 @@ else:
 
 st.divider()
 
-# ==============================
-# APRENDIZADO
-# ==============================
-
 st.header("Evolução do aprendizado")
 
 df = pd.read_csv("data/recompensas.csv")
@@ -194,9 +173,36 @@ política de decisão mais consistente.
 
 st.divider()
 
-# ==============================
-# POLÍTICA APRENDIDA
-# ==============================
+st.header("Dataset sintético utilizado")
+
+df_estudantes = pd.read_csv("data/estudantes_simulados.csv")
+
+d1, d2, d3 = st.columns(3)
+
+d1.metric("Registros simulados", len(df_estudantes))
+d2.metric(
+    "Estados únicos",
+    df_estudantes[
+        ["motivacao_num", "estresse_num", "desempenho_num", "frequencia_num"]
+    ].drop_duplicates().shape[0]
+)
+d3.metric("Níveis por variável", "3")
+
+st.write("""
+Foi criado um dataset sintético para representar os cenários possíveis de estudantes.
+Ele contém combinações de motivação, estresse, desempenho acadêmico e frequência.
+
+Esse dataset documenta os cenários utilizados no ambiente simulado. O agente, entretanto,
+não foi treinado por aprendizado supervisionado. Ele aprendeu por interação com o ambiente,
+recebendo recompensas e penalidades conforme suas ações.
+""")
+
+st.dataframe(
+    df_estudantes.head(30),
+    use_container_width=True
+)
+
+st.divider()
 
 st.header("Política aprendida")
 
@@ -220,10 +226,6 @@ st.dataframe(
 
 st.divider()
 
-# ==============================
-# LIMITAÇÕES
-# ==============================
-
 st.header("Limitações e trabalhos futuros")
 
 st.warning("""
@@ -235,4 +237,7 @@ st.write("""
 Como evolução, o modelo poderia ser treinado com dados reais de estudantes,
 histórico de frequência, desempenho acadêmico, participação em monitorias e indicadores
 de risco de evasão.
+
+Também seria possível comparar o Q-Learning com outros algoritmos, como SARSA,
+e integrar o sistema a ambientes virtuais de aprendizagem.
 """)
