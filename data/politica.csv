@@ -1,82 +1,82 @@
-estado,acao
-"(2, 1, 0, 2)",Estudar Sozinho
-"(2, 2, 1, 2)",Estudar Sozinho
-"(2, 2, 2, 2)",Apoio Pedagógico
-"(2, 1, 2, 2)",Atividade Física
-"(1, 2, 0, 2)",Estudar Sozinho
-"(1, 2, 1, 2)",Estudar Sozinho
-"(1, 2, 2, 2)",Apoio Pedagógico
-"(1, 0, 1, 1)",Estudar Sozinho
-"(1, 1, 2, 1)",Estudar Sozinho
-"(1, 2, 2, 1)",Descansar
-"(2, 1, 2, 1)",Estudar Sozinho
-"(2, 2, 2, 1)",Participar de Monitoria
-"(2, 0, 2, 1)",Estudar Sozinho
-"(1, 2, 0, 1)",Estudar Sozinho
-"(1, 2, 1, 1)",Participar de Monitoria
-"(0, 1, 1, 1)",Estudar Sozinho
-"(0, 2, 2, 1)",Grupo de Estudos
-"(1, 0, 2, 1)",Estudar Sozinho
-"(2, 0, 2, 2)",Descansar
-"(1, 2, 0, 0)",Apoio Pedagógico
-"(1, 2, 1, 0)",Estudar Sozinho
-"(1, 2, 2, 0)",Grupo de Estudos
-"(1, 0, 0, 1)",Estudar Sozinho
-"(1, 1, 1, 1)",Estudar Sozinho
-"(2, 1, 1, 0)",Participar de Monitoria
-"(2, 2, 2, 0)",Participar de Monitoria
-"(0, 1, 0, 2)",Estudar Sozinho
-"(0, 2, 1, 2)",Estudar Sozinho
-"(0, 2, 2, 2)",Grupo de Estudos
-"(1, 1, 2, 2)",Estudar Sozinho
-"(0, 1, 1, 2)",Estudar Sozinho
-"(2, 0, 1, 1)",Participar de Monitoria
-"(0, 1, 2, 0)",Apoio Pedagógico
-"(0, 2, 2, 0)",Participar de Monitoria
-"(1, 1, 2, 0)",Estudar Sozinho
-"(2, 1, 2, 0)",Estudar Sozinho
-"(1, 0, 0, 2)",Grupo de Estudos
-"(1, 1, 1, 2)",Estudar Sozinho
-"(2, 0, 0, 2)",Grupo de Estudos
-"(2, 1, 1, 2)",Estudar Sozinho
-"(0, 1, 2, 1)",Estudar Sozinho
-"(2, 2, 0, 1)",Estudar Sozinho
-"(2, 2, 1, 1)",Estudar Sozinho
-"(2, 0, 2, 0)",Estudar Sozinho
-"(2, 2, 1, 0)",Estudar Sozinho
-"(0, 0, 0, 2)",Estudar Sozinho
-"(2, 2, 0, 0)",Estudar Sozinho
-"(1, 1, 1, 0)",Estudar Sozinho
-"(0, 0, 2, 1)",Grupo de Estudos
-"(0, 0, 1, 1)",Estudar Sozinho
-"(0, 1, 0, 1)",Estudar Sozinho
-"(0, 2, 1, 1)",Estudar Sozinho
-"(0, 0, 0, 1)",Estudar Sozinho
-"(1, 0, 2, 0)",Descansar
-"(2, 0, 1, 2)",Estudar Sozinho
-"(2, 2, 0, 2)",Estudar Sozinho
-"(0, 0, 1, 2)",Estudar Sozinho
-"(0, 1, 2, 2)",Estudar Sozinho
-"(1, 1, 0, 2)",Estudar Sozinho
-"(2, 0, 0, 1)",Estudar Sozinho
-"(2, 1, 1, 1)",Atividade Física
-"(0, 2, 0, 2)",Estudar Sozinho
-"(1, 0, 1, 0)",Apoio Pedagógico
-"(2, 0, 1, 0)",Estudar Sozinho
-"(0, 0, 2, 0)",Estudar Sozinho
-"(2, 1, 0, 1)",Estudar Sozinho
-"(0, 1, 1, 0)",Estudar Sozinho
-"(1, 0, 2, 2)",Estudar Sozinho
-"(0, 0, 0, 0)",Estudar Sozinho
-"(1, 0, 0, 0)",Estudar Sozinho
-"(1, 1, 0, 1)",Participar de Monitoria
-"(0, 1, 0, 0)",Descansar
-"(0, 2, 1, 0)",Estudar Sozinho
-"(1, 1, 0, 0)",Apoio Pedagógico
-"(2, 0, 0, 0)",Estudar Sozinho
-"(0, 0, 1, 0)",Estudar Sozinho
-"(2, 1, 0, 0)",Estudar Sozinho
-"(1, 0, 1, 2)",Estudar Sozinho
-"(0, 0, 2, 2)",Estudar Sozinho
-"(0, 2, 0, 1)",Estudar Sozinho
-"(0, 2, 0, 0)",Estudar Sozinho
+estado,motivacao,estresse,desempenho,frequencia,acao
+"(0, 0, 0, 0)",0,0,0,0,Grupo de Estudos
+"(0, 0, 0, 1)",0,0,0,1,Estudar Sozinho
+"(0, 0, 0, 2)",0,0,0,2,Estudar Sozinho
+"(0, 0, 1, 0)",0,0,1,0,Descansar
+"(0, 0, 1, 1)",0,0,1,1,Estudar Sozinho
+"(0, 0, 1, 2)",0,0,1,2,Estudar Sozinho
+"(0, 0, 2, 0)",0,0,2,0,Estudar Sozinho
+"(0, 0, 2, 1)",0,0,2,1,Estudar Sozinho
+"(0, 0, 2, 2)",0,0,2,2,Estudar Sozinho
+"(0, 1, 0, 0)",0,1,0,0,Grupo de Estudos
+"(0, 1, 0, 1)",0,1,0,1,Estudar Sozinho
+"(0, 1, 0, 2)",0,1,0,2,Estudar Sozinho
+"(0, 1, 1, 0)",0,1,1,0,Apoio Pedagógico
+"(0, 1, 1, 1)",0,1,1,1,Descansar
+"(0, 1, 1, 2)",0,1,1,2,Estudar Sozinho
+"(0, 1, 2, 0)",0,1,2,0,Estudar Sozinho
+"(0, 1, 2, 1)",0,1,2,1,Estudar Sozinho
+"(0, 1, 2, 2)",0,1,2,2,Estudar Sozinho
+"(0, 2, 0, 0)",0,2,0,0,Estudar Sozinho
+"(0, 2, 0, 1)",0,2,0,1,Estudar Sozinho
+"(0, 2, 0, 2)",0,2,0,2,Estudar Sozinho
+"(0, 2, 1, 0)",0,2,1,0,Estudar Sozinho
+"(0, 2, 1, 1)",0,2,1,1,Estudar Sozinho
+"(0, 2, 1, 2)",0,2,1,2,Estudar Sozinho
+"(0, 2, 2, 0)",0,2,2,0,Apoio Pedagógico
+"(0, 2, 2, 1)",0,2,2,1,Grupo de Estudos
+"(0, 2, 2, 2)",0,2,2,2,Grupo de Estudos
+"(1, 0, 0, 0)",1,0,0,0,Estudar Sozinho
+"(1, 0, 0, 1)",1,0,0,1,Participar de Monitoria
+"(1, 0, 0, 2)",1,0,0,2,Estudar Sozinho
+"(1, 0, 1, 0)",1,0,1,0,Estudar Sozinho
+"(1, 0, 1, 1)",1,0,1,1,Apoio Pedagógico
+"(1, 0, 1, 2)",1,0,1,2,Estudar Sozinho
+"(1, 0, 2, 0)",1,0,2,0,Estudar Sozinho
+"(1, 0, 2, 1)",1,0,2,1,Estudar Sozinho
+"(1, 0, 2, 2)",1,0,2,2,Estudar Sozinho
+"(1, 1, 0, 0)",1,1,0,0,Apoio Pedagógico
+"(1, 1, 0, 1)",1,1,0,1,Estudar Sozinho
+"(1, 1, 0, 2)",1,1,0,2,Estudar Sozinho
+"(1, 1, 1, 0)",1,1,1,0,Grupo de Estudos
+"(1, 1, 1, 1)",1,1,1,1,Grupo de Estudos
+"(1, 1, 1, 2)",1,1,1,2,Estudar Sozinho
+"(1, 1, 2, 0)",1,1,2,0,Estudar Sozinho
+"(1, 1, 2, 1)",1,1,2,1,Estudar Sozinho
+"(1, 1, 2, 2)",1,1,2,2,Estudar Sozinho
+"(1, 2, 0, 0)",1,2,0,0,Estudar Sozinho
+"(1, 2, 0, 1)",1,2,0,1,Estudar Sozinho
+"(1, 2, 0, 2)",1,2,0,2,Grupo de Estudos
+"(1, 2, 1, 0)",1,2,1,0,Estudar Sozinho
+"(1, 2, 1, 1)",1,2,1,1,Estudar Sozinho
+"(1, 2, 1, 2)",1,2,1,2,Grupo de Estudos
+"(1, 2, 2, 0)",1,2,2,0,Grupo de Estudos
+"(1, 2, 2, 1)",1,2,2,1,Descansar
+"(1, 2, 2, 2)",1,2,2,2,Grupo de Estudos
+"(2, 0, 0, 0)",2,0,0,0,Estudar Sozinho
+"(2, 0, 0, 1)",2,0,0,1,Estudar Sozinho
+"(2, 0, 0, 2)",2,0,0,2,Estudar Sozinho
+"(2, 0, 1, 0)",2,0,1,0,Estudar Sozinho
+"(2, 0, 1, 1)",2,0,1,1,Participar de Monitoria
+"(2, 0, 1, 2)",2,0,1,2,Estudar Sozinho
+"(2, 0, 2, 0)",2,0,2,0,Estudar Sozinho
+"(2, 0, 2, 1)",2,0,2,1,Estudar Sozinho
+"(2, 0, 2, 2)",2,0,2,2,Descansar
+"(2, 1, 0, 0)",2,1,0,0,Estudar Sozinho
+"(2, 1, 0, 1)",2,1,0,1,Estudar Sozinho
+"(2, 1, 0, 2)",2,1,0,2,Estudar Sozinho
+"(2, 1, 1, 0)",2,1,1,0,Estudar Sozinho
+"(2, 1, 1, 1)",2,1,1,1,Estudar Sozinho
+"(2, 1, 1, 2)",2,1,1,2,Estudar Sozinho
+"(2, 1, 2, 0)",2,1,2,0,Estudar Sozinho
+"(2, 1, 2, 1)",2,1,2,1,Estudar Sozinho
+"(2, 1, 2, 2)",2,1,2,2,Apoio Pedagógico
+"(2, 2, 0, 0)",2,2,0,0,Estudar Sozinho
+"(2, 2, 0, 1)",2,2,0,1,Estudar Sozinho
+"(2, 2, 0, 2)",2,2,0,2,Estudar Sozinho
+"(2, 2, 1, 0)",2,2,1,0,Descansar
+"(2, 2, 1, 1)",2,2,1,1,Estudar Sozinho
+"(2, 2, 1, 2)",2,2,1,2,Estudar Sozinho
+"(2, 2, 2, 0)",2,2,2,0,Participar de Monitoria
+"(2, 2, 2, 1)",2,2,2,1,Participar de Monitoria
+"(2, 2, 2, 2)",2,2,2,2,Atividade Física
